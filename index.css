@@ -1,3 +1,13 @@
 code {
     background-color: lightgray;
 }
+
+pre {
+    white-space: initial;
+    word-wrap: break-word;
+    width: 70%
+}
+.container{
+    word-wrap: break-word;
+    display: flexbox !important;
+}
