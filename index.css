@@ -11,3 +11,12 @@ pre {
     word-wrap: break-word;
     display: flexbox !important;
 }
+
+#video_title{
+    text-align: center;
+}
+
+iframe{
+    align-items: center;
+    padding-left: 17%;
+}
