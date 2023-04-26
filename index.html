@@ -46,7 +46,7 @@
             </p>
         </div>
         <div>
-            <h3 id="tlt">Make node app run faster</h3>
+            <h3 class="tlt">Make node app run faster</h3>
             <p>To speedify app at least add <code>async</code> package to your project
                 <code>npm i async --save-dev</code>. After add <code>parallel</code> function
             and express middleware with this function as on image below</p>
@@ -88,6 +88,32 @@
                     <p>Give the name by filling <code>Title</code> field</p>
             <p>After key will be created, do all as usual<br> <code>$git add .</code><br>
             <code>$git commit -am "comment"</code><br><code>$git push --all</code></p>
+        </div>
+        <div>
+            <h3 class="tlt">How to enable JQuery, Ajax and Recaptcha</h3>
+            <p>To enable JQuery and Ajax accordingly we need connect with its library.
+                So, just add this script to your site<br>
+                <code>
+                    &ltscript src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt
+                &lt/script&gt
+                </code><br>
+                With recaptcha the same situation, just add this script to your site<br>
+                <code>
+                    &ltscript 
+                    src="https://www.google.com/recaptcha/enterprise.js?render={your site secret}"&gt
+                    &lt/script&gt
+                </code><br>
+                Generate site secret for your site you can by following the link 
+                <a href="https://cloud.google.com/recaptcha-enterprise/docs/create-key" target="_blank">
+                    Generate site secret
+                </a><br>
+                To test if libraries were enabled successfuly open your .html file in any browser, 
+                open DevTools and type <code>grecaptcha</code> in console if everything is ok it shuold 
+                return you an 
+                object with <code>enterprise</code> field - this action checks if recapthca was enabled
+                To test if <code>ajax</code> is avaliable now open Dev console and type 
+                <code>$.ajax</code> if everything is ok it should return you a function
+            </p>
         </div>
         <script src="./index.js"></script>
     </body>
