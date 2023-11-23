@@ -44,4 +44,19 @@ function downloadFile() {
 }
 
 // Download it using our function
-document.getElementById('downloader').addEventListener('click', downloadFile)
+if(document.getElementById('downloader')) {
+  document.getElementById('downloader').addEventListener('click', downloadFile);
+}
+
+// pagination logic
+Array.from(document.getElementsByClassName('pages')).forEach(button => {
+  button.addEventListener('click', pagination);
+});
+
+function pagination(event) {
+  if(event.target.innerText == '1') {
+    window.open('./index.html', '_self');
+  } else {
+    window.open(`${event.target.innerText}.html`, '_self');
+  }
+}

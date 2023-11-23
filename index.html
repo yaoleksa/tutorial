@@ -2,27 +2,28 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css" />
-    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR7GrfxKpMod0vZ5Z3OOgpzUc2XCc0oowgSA&usqp=CAU">
+    <link rel="shortcut icon" href="./imgs/_124238961_tennisbook.png">
 </head>
 <html>
     <body>
         <div>
+            <h3>How to enable all files in the folder when run the server</h3>
             <p>! Do everything like on image below:</p>
-            <img src="./screenshot.png">
+            <img src="./imgs/screenshot.png">
             <p>The most important part is <code>publicPath</code> variable 
                 and <code>express.static</code> method call</p>
                 <p>Into <code>publicPath</code> variable we say to browser where all files located. <br>
                 And <code>express.static</code> 
                 method helps browser use all files in current (project) folder</p>
                 <p>A little surprise</p>
-                <img src="./surprise.png">
+                <img src="./imgs/surprise.png">
                 <p>You can even do like on the image above, I mean that it's unnecessary to<br>
                     pass file name like argument  to <code>get</code> handler in the default page. <br>
                     Cause browser listens that folder and always opens index.html</p><br>
                     <p><b>Also one more surprise you don't need to create a 
                         <code>publicPath</code> variable</b></p>
                     <br>
-                    <img src="./instead.png"><br>
+                    <img src="./imgs/instead.png"><br>
                     You can use <code>express.static</code> middleware with current directory 
                     like a parameter instead
                     <article>
@@ -50,7 +51,7 @@
             <p>To speedify app at least add <code>async</code> package to your project
                 <code>npm i async --save-dev</code>. After add <code>parallel</code> function
             and express middleware with this function as on image below</p>
-            <img src="./speedify node app.png">
+            <img src="./imgs/speedify node app.png">
             <p>If you wanna read in details you can follow the link 
                 <a href="https://www.gosquared.com/blog/making-dashboard-faster">
                     5 steps to making a Node.js app faster
@@ -68,7 +69,7 @@
         </div>
         <div>
             <h3>How to fix GitHub ERROR: DEPLOY DENIED</h3>
-            <img src="./denied error.png">
+            <img src="./imgs/denied error.png">
             <p>Open terminal and write next commands</p>
             <code>$git init</code><br>
             <code>$git remote add origin git@github.com:juliamariaanna:presentation.git</code><br>
@@ -80,10 +81,10 @@
             <p>Important to copy all returned text (from <code>ssh-ed25519</code> 
                 to <code>ekt_1@ukr.net</code>)</p>
                 <p>After you have run all above comands go to profile settings</p>
-                <img src="./profile settings.png"><br>
+                <img src="./imgs/profile settings.png"><br>
                     <p>Go to SSH and GPG keys section</p>
                     <p>Click on <code>New SSH key</code></p>
-                    <img src="./New ssh key.png"><br>
+                    <img src="./imgs/New ssh key.png"><br>
                     <p>Paste copied text to <code>Key</code> field</p>
                     <p>Give the name by filling <code>Title</code> field</p>
             <p>After key will be created, do all as usual<br> <code>$git add .</code><br>
@@ -114,6 +115,9 @@
                 To test if <code>ajax</code> is avaliable now open Dev console and type 
                 <code>$.ajax</code> if everything is ok it should return you a function
             </p>
+        </div>
+        <div id="page_container">
+            <pre><button class="pages">1</button><button class="pages">2</button></pre>
         </div>
         <script src="./index.js"></script>
     </body>
