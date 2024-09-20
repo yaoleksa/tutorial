@@ -35,24 +35,20 @@
          First of all, you need to create a new project on the <a href="https://console.cloud.google.com/" target="_blank">Google Cloud console</a>. For this purpose go to 
          the <a href="https://console.cloud.google.com/cloud-resource-manager" target="_blank">Manage Resources</a> tab and click the <code>CREATE PROJECT</code> button.<br><br>
          <img src="./imgs/create-project.png"><br><br>
-         Assign the name to your project, this is only one required parameter for now. After clicking on the three dashes on the left-up corner<br><br>
+         Assign the name to your project, this is only one required parameter for now. 
+         <br><br>
+         <img src="./imgs/name.png">
+         <br><br>
+         After clicking on the three dashes on the left-up corner<br><br>
          <img src="./imgs/dashes.png">
          <br><br>
          and select the APIs & Services button from the drop-down menu and after click on the Library section from the drop-down menu on the left.
          <br><br>
          <img src="./imgs/APInServicesLibrary.png">
          <br><br>
-         Scroll down and click on Google Sheets API widget. Enable it.
       </p>
-      <p>The next step is to choose the <a href="https://console.cloud.google.com/apis/credentials">credentials</a> tab on the left the drop-down menu and click the 
-      <code>CREATE CREDENTIALS</code> button on the top bar. Choose API key type. It's all we can make an API call using CURL or any other REST client.</p>
-      <p>The example below illustrates how to make a GET HTTP API call using a CURL CLI. So, open a terminal and paste the next code, click ENTER</p>
-      <pre>
-        curl -X GET https://sheets.googleapis.com/v4/spreadsheets/{SpreadsheetID}?key={API_KEY}
-      </pre>
-      <p>Of course that {API_KEY} and {SpreadsheetID} you replace with the already generated API key on the previous step</p>
     <div id="page_container">
-      <pre><button class="pages">1</button><button class="pages">2</button></pre>
+      <pre><button class="pages">1</button><button class="pages">2</button><button class="pages">3</button></pre>
     </div>
   </body>
   <script src="./index.js"></script>
