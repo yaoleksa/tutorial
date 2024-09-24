@@ -12,117 +12,36 @@
     </head>
     <body>
         <div>
-            <h3>How to enable all files in the folder when run the server</h3>
-            <p>! Do everything like on image below:</p>
-            <img src="./imgs/screenshot.png">
-            <p>The most important part is <code>publicPath</code> variable 
-                and <code>express.static</code> method call</p>
-                <p>Into <code>publicPath</code> variable we say to browser where all files located. <br>
-                And <code>express.static</code> 
-                method helps browser use all files in current (project) folder</p>
-                <p>A little surprise</p>
-                <img src="./imgs/surprise.png">
-                <p>You can even do like on the image above, I mean that it's unnecessary to<br>
-                    pass file name like argument  to <code>get</code> handler in the default page. <br>
-                    Cause browser listens that folder and always opens index.html</p><br>
-                    <p><b>Also one more surprise you don't need to create a 
-                        <code>publicPath</code> variable</b></p>
-                    <br>
-                    <img src="./imgs/instead.png"><br>
-                    You can use <code>express.static</code> middleware with current directory 
-                    like a parameter instead
-                    <article>
-                        <h1>Install all required package for simple react app</h1>
-                        <h2>Install</h2>
-                            <pre>npm i react react-dom webpack webpack-cli babel babel-loader @babel/core @babel/preset-react @babel/preset-env react-bootstrap bootstrap css-loader style-loader --save-dev</pre>   
-                        <h2>Uninstall</h2>
-                            <pre>npm uninstall react react-dom webpack webpack-cli babel babel-loader @babel/core @babel/preset-react @babel/preset-env react-bootstrap bootstrap css-loader style-loader</pre>
-                    </article>
-                    <a href="https://ogp.me/">The Open Graph protocol</a><br>
-                    <a target="_blank"
-                    href="https://www.stefanjudis.com/snippets/how-trigger-file-downloads-with-javascript/">
-                        Create download file link
-                    </a><br>
-                    <a id="downloader" href="#here">webpack.config.js for average react app</a>
+            <h3>Table of content</h3>
+            <ol>
+                <li>
+                    <a href="./1.html#chapter1">How to enable all files in the folder when run the server</a>
+                </li>
+                <li>
+                    <a href="./1.html#chapter2">Make node app run faster</a>
+                </li>
+                <li>
+                    <a href="./1.html#video_title">How to deploy React app on Heroku platform</a>
+                </li>
+                <li>
+                    <a href="./1.html#chapter4">How to fix GitHub ERROR: DEPLOY DENIED</a>
+                </li>
+                <li>
+                    <a href="./1.html#chapter5">How to enable JQuery, Ajax and Recaptcha</a>
+                </li>
+                <li>
+                    <a href="./2.html#chapter6">The simpliest redirection logic</a>
+                </li>
+                <li>
+                    <a href="./2.html#chapter7">How to deploy simple API with aws service</a>
+                </li>
+                <li>
+                    <a href="./2.html#chapter8">How to use basic Google Sheet API (how to use it via CURL or some other REST client)</a>
+                </li>
+            </ol>
         </div>
-        <div>
-            <p>
-                To enable default bootstrap stylesheets include this line of code to your app file: 
-                <code>import 'bootstrap/dist/css/bootstrap.min.css'</code>
-            </p>
-        </div>
-        <div>
-            <h3 class="tlt">Make node app run faster</h3>
-            <p>To speedify app at least add <code>async</code> package to your project
-                <code>npm i async --save-dev</code>. After add <code>parallel</code> function
-            and express middleware with this function as on image below</p>
-            <img src="./imgs/speedify node app.png">
-            <p>If you wanna read in details you can follow the link 
-                <a href="https://www.gosquared.com/blog/making-dashboard-faster">
-                    5 steps to making a Node.js app faster
-                </a></p>
-        </div>
-        <div>
-            <h3 id="video_title">How to deploy React app on Heroku platform</h3>
-            <iframe width="718" 
-            height="574" 
-            src="https://www.youtube.com/embed/Mjk4akqGqq4" 
-            title="Як розгорнути React додаток на платформі Heroku" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen></iframe>
-        </div>
-        <div>
-            <h3>How to fix GitHub ERROR: DEPLOY DENIED</h3>
-            <img src="./imgs/denied error.png">
-            <p>Open terminal and write next commands</p>
-            <code>$git init</code><br>
-            <code>$git remote add origin git@github.com:juliamariaanna:presentation.git</code><br>
-            <p>Important to use SSL link, not https!</p>
-            <code>$ssh-keygen -t ed25519 -C "ekt_1@ukr.net"</code><br>
-            <p>Name file <code>key</code> And left <code>pasphrase</code> field empty</p>
-            <code>$ssh-add key</code><br>
-            <code>$cat key.pub</code><br>
-            <p>Important to copy all returned text (from <code>ssh-ed25519</code> 
-                to <code>ekt_1@ukr.net</code>)</p>
-                <p>After you have run all above comands go to profile settings</p>
-                <img src="./imgs/profile settings.png"><br>
-                    <p>Go to SSH and GPG keys section</p>
-                    <p>Click on <code>New SSH key</code></p>
-                    <img src="./imgs/New ssh key.png"><br>
-                    <p>Paste copied text to <code>Key</code> field</p>
-                    <p>Give the name by filling <code>Title</code> field</p>
-            <p>After key will be created, do all as usual<br> <code>$git add .</code><br>
-            <code>$git commit -am "comment"</code><br><code>$git push --all</code></p>
-        </div>
-        <div>
-            <h3 class="tlt">How to enable JQuery, Ajax and Recaptcha</h3>
-            <p>To enable JQuery and Ajax accordingly we need connect with its library.
-                So, just add this script to your site<br>
-                <code>
-                    &ltscript src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"&gt
-                &lt/script&gt
-                </code><br>
-                With recaptcha the same situation, just add this script to your site<br>
-                <code>
-                    &ltscript 
-                    src="https://www.google.com/recaptcha/enterprise.js?render={your site secret}"&gt
-                    &lt/script&gt
-                </code><br>
-                Generate site secret for your site you can by following the link 
-                <a href="https://cloud.google.com/recaptcha-enterprise/docs/create-key" target="_blank">
-                    Generate site secret
-                </a><br>
-                To test if libraries were enabled successfuly open your .html file in any browser, 
-                open DevTools and type <code>grecaptcha</code> in console if everything is ok it shuold 
-                return you an 
-                object with <code>enterprise</code> field - this action checks if recapthca was enabled
-                To test if <code>ajax</code> is avaliable now open Dev console and type 
-                <code>$.ajax</code> if everything is ok it should return you a function
-            </p>
-        </div>
-        <div id="page_container">
-            <pre><button class="pages">1</button><button class="pages">2</button><button class="pages">3</button></pre>
+        <div id="page_container"></div>
+            <pre><button class="pages">1</button><button class="pages">2</button><button class="pages">3</button><button class="pages">4</button></pre>
         </div>
         <script src="./index.js"></script>
     </body>
