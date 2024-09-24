@@ -25,7 +25,11 @@ iframe{
 }
 
 #page_container {
-    margin-left: 45%;
+    margin-left: 45% !important;
+}
+
+#table_of_content {
+    right: 0;
 }
 
 h3 {

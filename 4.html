@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta property="og:title" content="The Tutorial" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yaoleksa.github.io/tutorial" />
+    <meta property="og:image" content="./imgs/tennisbook.png" />
+    <meta property="og:description" content="Short, useful manual describes few situations which I have faced with">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="shortcut icon" href="./imgs/tennisbook.png">
+    <title>Second page</title>
+  </head>
+  <body>
+    <p>Scroll down and click on Google Sheets API widget. Enable it.</p>
+    <p>The next step is to choose the <a href="https://console.cloud.google.com/apis/credentials">credentials</a> tab on the left the drop-down menu and click the 
+      <code>CREATE CREDENTIALS</code> button on the top bar. Choose API key type. It's all we can make an API call using CURL or any other REST client.</p>
+      <p>The example below illustrates how to make a GET HTTP API call using a CURL CLI. So, open a terminal and paste the next code, click ENTER</p>
+      <pre>
+        curl -X GET https://sheets.googleapis.com/v4/spreadsheets/{SpreadsheetID}?key={API_KEY}
+      </pre>
+      <p>Of course that {API_KEY} and {SpreadsheetID} you replace with the already generated API key on the previous step</p>
+      <div id="page_container">
+        <pre><button class="pages">1</button><button class="pages">2</button><button class="pages">3</button><button class="pages">4</button></pre>
+      </div>
+    <script src="./index.js"></script>
+  </body>
+  <script src="./index.js"></script>
+</html>

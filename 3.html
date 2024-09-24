@@ -13,18 +13,43 @@
     <title>Second page</title>
   </head>
   <body>
-    <p>Scroll down and click on Google Sheets API widget. Enable it.</p>
-    <p>The next step is to choose the <a href="https://console.cloud.google.com/apis/credentials">credentials</a> tab on the left the drop-down menu and click the 
-      <code>CREATE CREDENTIALS</code> button on the top bar. Choose API key type. It's all we can make an API call using CURL or any other REST client.</p>
-      <p>The example below illustrates how to make a GET HTTP API call using a CURL CLI. So, open a terminal and paste the next code, click ENTER</p>
-      <pre>
-        curl -X GET https://sheets.googleapis.com/v4/spreadsheets/{SpreadsheetID}?key={API_KEY}
-      </pre>
-      <p>Of course that {API_KEY} and {SpreadsheetID} you replace with the already generated API key on the previous step</p>
-      <div id="page_container">
+    <h3 id="chapter6">The simpliest redirection logic</h3>
+    <p>To implement redirection logic the easiest approach would be set response code to 302 and add response header property <code>Location</code>. Example of successful 
+      implantation you can see on image below</p>
+      <img src="./imgs/redirection.png">
+      <h3 id="chapter7">How to deploy simple API with aws service</h3>
+      <p>Due to AWS being a serverless resource, firstly you need to install the <code>serverless</code> package globally on your PC with <code>npm</code>. For this purpose run the next 
+      command into the terminal <code>sudo npm i serverless -g</code>. After that, you need to configure your credentials with the next command: 
+      <code>serverless config credentials --provider aws --key your_key --secret your_secret</code>. You can read how to get key and secret in this article: 
+      <a href="https://hackernoon.com/deploying-a-simple-serverless-nodejs-application-on-aws-lambda-functions" target="_blank">
+        Deploying a Simple Serverless Node.js Application on AWS Lambda Functions</a>. After this step, you can select the desired language and create a project based on Serverless 
+        templates.
+      A list of all available templates follows by the next link <a href="https://www.serverless.com/framework/docs/providers/aws/cli-reference/create" target="_blank">
+        Available Templates
+      </a></p>
+      <h3 id="chapter8">How to use basic Google Sheet API (how to use it via CURL or some other REST client)</h3>
+      <p>The <a href="https://developers.google.com/sheets/api/guides/concepts" target="_blank">Google documentation for developers</a> provides many examples of interacting 
+        with Google Sheets using different programming languages such as Python, Ruby, Java, etc.
+        But in this tutorial, I want to highlight the basic API, which you can use with CURL CLI, Postman, or any other REST client.</p>
+      <p>So, let's start with a basic HTTP GET request which returns a simple JSON object with information about the spreadsheet title, ID, time zone, default format, etc.
+         First of all, you need to create a new project on the <a href="https://console.cloud.google.com/" target="_blank">Google Cloud console</a>. For this purpose go to 
+         the <a href="https://console.cloud.google.com/cloud-resource-manager" target="_blank">Manage Resources</a> tab and click the <code>CREATE PROJECT</code> button.<br><br>
+         <img src="./imgs/create-project.png"><br><br>
+         Assign the name to your project, this is only one required parameter for now. 
+         <br><br>
+         <img src="./imgs/name.png">
+         <br><br>
+         After clicking on the three dashes on the left-up corner<br><br>
+         <img src="./imgs/dashes.png">
+         <br><br>
+         and select the APIs & Services button from the drop-down menu and after click on the Library section from the drop-down menu on the left.
+         <br><br>
+         <img src="./imgs/APInServicesLibrary.png">
+         <br><br>
+      </p>
+    <div id="page_container">
         <pre><button class="pages">1</button><button class="pages">2</button><button class="pages">3</button><button class="pages">4</button></pre>
-      </div>
-    <script src="./index.js"></script>
+    </div>
   </body>
   <script src="./index.js"></script>
 </html>
