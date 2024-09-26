@@ -26,9 +26,28 @@
     <br>
     <img src="./imgs/getrange.png">
     <br>
-      <div id="page_container">
-        <pre><button class="pages">1</button><button class="pages">2</button><button class="pages">3</button><button class="pages">4</button><button class="pages">5</button></pre>
-      </div>
+    <h4 id="chapter8_2">Write to Google Sheet</h4>
+    <p>You need to add a <code>Bearer</code> access token to your request header to <code>POST</code> some content in a Google spreadsheet. You can get access tokens on 
+      <a href="https://developers.google.com/oauthplayground/" target="_blank">OAuth 2.0 Playground</a>. For this purpose pick Google Sheets API on the left container. 
+      To do this quickly you can use a <code>Ctrl + F</code> keyboard shortcut. Start typing the sheet in the search bar. When you find the Google Sheets API item click on it,
+      select <code>https://www.googleapis.com/auth/spreadsheets</code> scope and click the <code>Authorize APIs</code> button.</p>
+      <br>
+      <img src="./imgs/oauth.png">
+      <br>
+      <p>In this step, you need to login into your Google account and allow OAuth 2.0 platform access to your account. When you've successfuly logged in you click on
+        the <code>Exchange authorization code for tokens</code> button.
+      </p>
+      <br>
+      <img src="./imgs/exchangecode.png">
+      <br>
+    </p>
+    <p>If everything is good you should get access and refresh tokens</p>
+    <br>
+    <img src="./imgs/tokens.png">
+    <br>
+    <div id="page_container">
+      <pre><button class="pages">1</button><button class="pages">2</button><button class="pages">3</button><button class="pages">4</button><button class="pages">5</button></pre>
+    </div>
     <script src="./index.js"></script>
   </body>
   <script src="./index.js"></script>
