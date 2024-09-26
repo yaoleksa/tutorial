@@ -1,3 +1,16 @@
+ol {
+    counter-reset: item;
+}
+
+li {
+    display: block;
+}
+
+li:before {
+    content: counters(item, ".") "." " ";
+    counter-increment: item;
+}
+
 code {
     background-color: lightgray;
 }
@@ -33,5 +46,9 @@ iframe{
 }
 
 h3 {
+    text-align: center;
+}
+
+h4 {
     text-align: center;
 }
