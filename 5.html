@@ -17,6 +17,15 @@
     <br>
     <img src="./imgs/responseexample.png">
     <br>
+    <p>You can fetch some cells' content as well. For this purpose add sheet name and range optional parameters to your request. An example of such a request is seen below
+      <pre>curl -X GET 'https://sheets.googleapis.com/v4/spreadsheets/{SPREADSHEET_ID}/values/{SHEET_NAME}!{RANGE}?key={API_KEY}'</pre>
+      Take attention this time we use a single quote for a URL it's crucial because there is <code>!</code> sign in a range parameter so BASH can't treat the URL correctly in this case, 
+      to make BASH work with such URL we wrap the whole URL into a single quote.<br>
+      Expected that you will receive a response similar to like in the image below.
+    </p>
+    <br>
+    <img src="./imgs/getrange.png">
+    <br>
       <div id="page_container">
         <pre><button class="pages">1</button><button class="pages">2</button><button class="pages">3</button><button class="pages">4</button><button class="pages">5</button></pre>
       </div>
