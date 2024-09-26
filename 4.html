@@ -10,12 +10,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css" />
     <link rel="shortcut icon" href="./imgs/tennisbook.png">
-    <title>Second page</title>
+    <title>Fourth page</title>
   </head>
   <body>
-    <p>Scroll down and click on Google Sheets API widget. Enable it.</p>
-    <p>The next step is to choose the <a href="https://console.cloud.google.com/apis/credentials">credentials</a> tab on the left the drop-down menu and click the 
-      <code>CREATE CREDENTIALS</code> button on the top bar. Choose API key type. It's all we can make an API call using CURL or any other REST client.</p>
+    <p>It's crucial to select the proper project if you have a few</p>
+    <br>
+      <img src="./imgs/selectProj.png">
+    <br>
+    <p>Scroll down and click on Google Sheets API widget.</p>
+    <br>
+      <img src="./imgs/GSapi.png">
+    <br>
+    <p>Enable it.</p>
+    <br>
+      <img src="./imgs/enable.png">
+    <br>
+    <p>The next step is to choose the <a href="https://console.cloud.google.com/apis/credentials" target="_blank">credentials</a> tab on the left the drop-down menu and click the 
+      <code>CREATE CREDENTIALS</code> button on the top bar.</p>
+      <br>
+      <img src="./imgs/credentials.png">
+      <br>
+      <p>Choose API key type. It's all we can make an API call using CURL or any other REST client.</p>
       <p>The example below illustrates how to make a GET HTTP API call using a CURL CLI. So, open a terminal and paste the next code, click ENTER</p>
       <pre>
         curl -X GET https://sheets.googleapis.com/v4/spreadsheets/{SpreadsheetID}?key={API_KEY}
