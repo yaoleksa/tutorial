@@ -1,20 +1,16 @@
 ol {
     counter-reset: item;
 }
-
 li {
     display: block;
 }
-
 li:before {
     content: counters(item, ".") "." " ";
     counter-increment: item;
 }
-
 code {
     background-color: lightgray;
 }
-
 pre {
     white-space: initial;
     word-wrap: break-word;
@@ -24,11 +20,9 @@ pre {
     word-wrap: break-word;
     display: flexbox !important;
 }
-
 #video_title{
     text-align: center;
 }
-
 iframe{
     align-items: center;
     padding-left: 17%;
@@ -36,19 +30,18 @@ iframe{
 .tlt{
     text-align: center;
 }
-
+.low_pages {
+    margin-left: -0.5rem;
+}
 #page_container {
     margin-left: 45% !important;
 }
-
 #table_of_content {
     right: 0;
 }
-
 h3 {
     text-align: center;
 }
-
 h4 {
     text-align: center;
 }
