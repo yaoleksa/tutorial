@@ -30,12 +30,20 @@
       <br>
       <img src="./imgs/credentials.png">
       <br>
-      <p>Choose API key type. It's all we can make an API call using CURL or any other REST client.</p>
+      <p>Choose API key type.</p>
+      <br>
+      <img src="./imgs/apikey.png">
+      <br>
+      <p>It's all we can make an API call using CURL or any other REST client.</p>
       <p>The example below illustrates how to make a GET HTTP API call using a CURL CLI. So, open a terminal and paste the next code, click ENTER</p>
       <pre>
         curl -X GET https://sheets.googleapis.com/v4/spreadsheets/{SpreadsheetID}?key={API_KEY}
       </pre>
       <p>Of course that {API_KEY} and {SpreadsheetID} you replace with the already generated API key on the previous step</p>
+      <p>SpreadsheetID you can find by opening spreadsheet with which you want to work and copy ID from URL bar</p>
+      <br>
+      <img src="./imgs/spreadsheetID.png">
+      <br>
       <div id="page_container">
         <pre><button class="pages">1</button><button class="pages">2</button><button class="pages">3</button><button class="pages">4</button></pre>
       </div>
