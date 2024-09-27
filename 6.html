@@ -15,15 +15,20 @@
   <body>
     <p>When you've got an access token you're ready to make an API call. An example is seen below
       <pre>curl -X POST \<br>
-        -H "Authorization: Bearer ya29.a0AcM612yJ2MBd27eYZ-kD-w1tzLyu8RYLl3kTiUH4JI1nb5TkbwfCThAKvoc3dDN_lZvacUH5RpEuVjewfsUdpWttOppwEdVUSDOgKlMBch089fwHFNXJFB9VzKZozUDK5agjMb8XuhMybhOh9R5lT0k14CebrzOv7WwmjX1kaCgYKASQSARISFQHGX2MiuIakW3M1vZPMpe5FH3pdIA0175" \<br>
+        -H "Authorization: Bearer {ACCESS_TOKEN}" \<br>
         -H "Content-Type: application/json" \<br>
         -d '{<br>
               &nbsp;&nbsp;&nbsp;"range": "Data!A1",<br>
               &nbsp;&nbsp;&nbsp;"majorDimension": "ROWS",<br>
               &nbsp;&nbsp;&nbsp;"values": [["col1", "col2"], [0, 1]]
         }' \<br>
-        'https://sheets.googleapis.com/v4/spreadsheets/1WoJJcRpq8IOGaQZX_z2DtY6B_GeDuHmo0x-bDUPzxy4/values/Data!A1:append?valueInputOption=RAW'</pre>
+        'https://sheets.googleapis.com/v4/spreadsheets/{SPREADSHEET_ID}/values/Data!A1:append?valueInputOption=RAW'</pre>
+        As usual, you should change {ACCESS_TOKEN} {SPREADSHEET_ID} with your values. Expected that in a spreadsheet with SPREADSHEET_ID ID inserted corresponding values. Each array in
+        the `values` property is a row in the sheet. An example of how it looks is seen in the image below.
     </p>
+    <br>
+    <img src="./imgs/sheet.png">
+    <br>
     <div id="page_container">
       <pre>
         <button class="pages">1</button><button class="pages">2</button><button class="pages">3</button><button class="pages">4</button><button class="pages">5</button>
