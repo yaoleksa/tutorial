@@ -20,7 +20,7 @@
         -d '{<br>
               &nbsp;&nbsp;&nbsp;"range": "Data!A1",<br>
               &nbsp;&nbsp;&nbsp;"majorDimension": "ROWS",<br>
-              &nbsp;&nbsp;&nbsp;"values": [["col1", "col2"], [0, 1]]
+              &nbsp;&nbsp;&nbsp;"values": [["col1", "col2"], [0, 1]]<br>
         }' \<br>
         'https://sheets.googleapis.com/v4/spreadsheets/{SPREADSHEET_ID}/values/Data!A1:append?valueInputOption=RAW'</pre>
         As usual, you should change {ACCESS_TOKEN} {SPREADSHEET_ID} with your values. Expected that in a spreadsheet with SPREADSHEET_ID ID inserted corresponding values. Each array in
