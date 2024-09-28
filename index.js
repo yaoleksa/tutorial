@@ -49,7 +49,7 @@ if(document.getElementById('downloader')) {
 }
 
 // pagination logic
-Array.from(document.getElementsByClassName('pages')).forEach(button => {
+Array.from(document.querySelectorAll('.pages,.low_pages')).forEach(button => {
   button.addEventListener('click', pagination);
 });
 
