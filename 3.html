@@ -30,7 +30,10 @@
       <h3 id="chapter8">How to use basic Google Sheet API (how to use it via CURL or some other REST client)</h3>
       <p>The <a href="https://developers.google.com/sheets/api/guides/concepts" target="_blank">Google documentation for developers</a> provides many examples of interacting 
         with Google Sheets using different programming languages such as Python, Ruby, Java, etc.
-        But in this tutorial, I want to highlight the basic API, which you can use with CURL CLI, Postman, or any other REST client.</p>
+        But in this tutorial, I want to highlight the basic API, which you can use with CURL CLI, Postman, or any other REST client.<br>
+      <b>!Important notice!</b><br>
+      The Google Sheets API avaliable only for spreadsheets with public read/write permission (everybody who has the link can edit sheet).
+    </p>
       <h4 id="chapter8_1">Basic GET request</h4>
       <p>So, let's start with a basic HTTP GET request which returns a simple JSON object with information about the spreadsheet title, ID, time zone, default format, etc.
          First of all, you need to create a new project on the <a href="https://console.cloud.google.com/" target="_blank">Google Cloud console</a>. For this purpose go to 
