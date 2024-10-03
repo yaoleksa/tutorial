@@ -44,8 +44,18 @@
       <br>
       <p>As expected the result should be the same.</p>
       <h4 id="chapter8_3">Refresh the Google Sheets API access token</h4>
-      <p>
-      </p>
+      <p>In the previous step, you've got a <code>refresh token</code>. So to get new <code>access</code> you need to make a POST API call with that URL: 
+        <code>https://developers.google.com/oauthplayground/refreshAccessToken</code>. An example is seen below 
+      <pre>
+        curl -X POST \<br>
+ -d '{<br>
+        &nbsp;&nbsp;&nbsp;"token_uri": "https://oauth2.googleapis.com/token",<br> 
+        &nbsp;&nbsp;&nbsp;"refresh_token": "{REFRESH_TOKEN}"<br>
+ }' "https://developers.google.com/oauthplayground/refreshAccessToken"<br>
+      </pre>Expected that you should get a response similar to this one (and {REFRESH_TOKEN} you should replace with your refresh token received on the previous step):</p>
+      <br>
+      <img src="./imgs/refresh_token.png">
+      <br>
     <div id="page_container">
       <pre>
         <button class="pages">1</button><button class="pages">2</button><button class="pages">3</button><button class="pages">4</button><button class="pages">5</button>
