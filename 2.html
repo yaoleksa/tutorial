@@ -10,8 +10,10 @@
         <link rel="stylesheet" href="./index.css" />
         <link rel="shortcut icon" href="./imgs/tennisbook.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/plugins/line-numbers/prism-line-numbers.min.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/plugins/line-numbers/prism-line-numbers.min.js"></script>
     </head>
     <body>
         <div>
@@ -61,30 +63,29 @@
                 a file with your main logic type <code>text/babel</code> and data-type <code>module</code>. In the code snippet below,
                 you can see an example of how to implement this
             </p>
-            <pre><code class="language-html">
-                1 &lt!doctype html &gt
-                2 &lthtml dir="ltr" lang="uk" &gt
-                3 &lthead &gt
-                4    &ltmeta charset="utf-8" &gt
-                5    &lttitle &gtTic-Tac-Toe &lt/title &gt
-                6    &ltstyle &gt &lt/style &gt
-                7    &ltscript src="https://unpkg.com/@babel/standalone/babel.min.js" &gt &lt/script &gt
-                8    &ltscript src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js" &gt &lt/script &gt
-                9    &ltscript type="importmap" &gt
-                10        {
-                11            "imports": {
-                12                "react": "https://esm.sh/react?dev",
-                13                "react-dom/client": "https://esm.sh/react-dom/client?dev"
-                14            }
-                15        }
-                16    &lt/script &gt
-                17    &ltscript type="text/babel" data-type="module" src="app.js" &gt &lt/script &gt
-                18 &lt/head &gt
-                19 &ltbody &gt
-                20    &ltdiv id="root" &gt &lt/div &gt
-                21 &lt/body &gt
-                22 &lt/html &gt
-                23
+            <pre><code class="line-numbers language-html">
+                &lt!doctype html &gt
+                &lthtml dir="ltr" lang="uk" &gt
+                &lthead &gt
+                    &ltmeta charset="utf-8" &gt
+                    &lttitle &gtTic-Tac-Toe &lt/title &gt
+                    &ltstyle &gt &lt/style &gt
+                    &ltscript src="https://unpkg.com/@babel/standalone/babel.min.js" &gt &lt/script &gt
+                    &ltscript src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js" &gt &lt/script &gt
+                    &ltscript type="importmap" &gt
+                        {
+                            "imports": {
+                                "react": "https://esm.sh/react?dev",
+                                "react-dom/client": "https://esm.sh/react-dom/client?dev"
+                            }
+                        }
+                    &lt/script &gt
+                    &ltscript type="text/babel" data-type="module" src="app.js" &gt &lt/script &gt
+                &lt/head &gt
+                &ltbody &gt
+                    &ltdiv id="root" &gt &lt/div &gt
+                &lt/body &gt
+                &lt/html &gt
             </code></pre>
         </div>
         <div>

@@ -60,3 +60,5 @@ function pagination(event) {
     window.open(`${event.target.innerText}.html`, '_self');
   }
 }
+
+console.log(document.getElementsByClassName('row-number'))
