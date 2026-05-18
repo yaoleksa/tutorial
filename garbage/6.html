@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" prefix="og: https://ogp.me/ns#">
+  <head>
+    <meta property="og:title" content="The Tutorial" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yaoleksa.github.io/tutorial" />
+    <meta property="og:image" content="./imgs/tennisbook.png" />
+    <meta property="og:description" content="Short, useful manual describes few situations which I have faced with">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="shortcut icon" href="./imgs/tennisbook.png">
+    <title>Sixth page</title>
+  </head>
+  <body>
+    <p>When you've got an access token you're ready to make an API call. An example is seen below
+      <pre>curl -X POST \<br>
+        -H "Authorization: Bearer {ACCESS_TOKEN}" \<br>
+        -H "Content-Type: application/json" \<br>
+        -d '{<br>
+              &nbsp;&nbsp;&nbsp;"range": "Data!A1",<br>
+              &nbsp;&nbsp;&nbsp;"majorDimension": "ROWS",<br>
+              &nbsp;&nbsp;&nbsp;"values": [["col1", "col2"], [0, 1]]<br>
+        }' \<br>
+        'https://sheets.googleapis.com/v4/spreadsheets/{SPREADSHEET_ID}/values/Data!A1:append?valueInputOption=RAW'</pre>
+        As usual, you should change {ACCESS_TOKEN} {SPREADSHEET_ID} with your values. Expected that in a spreadsheet with SPREADSHEET_ID ID inserted corresponding values. Each array in
+        the `values` property is a row in the sheet. An example of how it looks is seen in the image below.
+    </p>
+    <br>
+    <img src="./imgs/sheet.png">
+    <br>
+    <p><b>!Important notice!</b><br>After you generate a Bearer token it automatically jumps to the next step, to show generated tokens manually switch to the previous (Step 2) step.</p>
+    <br>
+    <img src="./imgs/step2.png">
+    <br>
+    <p>As well you can also make an API call directly from the Google developers' playground page. As mentioned above it automatically jumps to the next step. 
+      So you just need to paste your URL into the <code>Request URI:</code> field, click on the <code>Enter request</code> body button, fill body JSON, close the input pop-up 
+      and at the final click on the <code>Send the request</code> button.</p>
+      <br>
+      <img src="./imgs/playground.png">
+      <br>
+      <br>
+      <img src="./imgs/body.png">
+      <br>
+      <p>As expected the result should be the same.</p>
+      <h4 id="chapter8_3">Refresh the Google Sheets API access token</h4>
+      <p>In the previous step, you've got a <code>refresh token</code>. So to get new <code>access</code> you need to make a POST API call with that URL: 
+        <code>https://developers.google.com/oauthplayground/refreshAccessToken</code>. An example is seen below 
+      <pre>
+        curl -X POST \<br>
+ -d '{<br>
+        &nbsp;&nbsp;&nbsp;"token_uri": "https://oauth2.googleapis.com/token",<br> 
+        &nbsp;&nbsp;&nbsp;"refresh_token": "{REFRESH_TOKEN}"<br>
+ }' "https://developers.google.com/oauthplayground/refreshAccessToken"<br>
+      </pre>Expected that you should get a response similar to this one (and {REFRESH_TOKEN} you should replace with your refresh token received on the previous step):</p>
+      <br>
+      <img src="./imgs/refresh_token.png">
+      <br>
+    <div id="page_container">
+      <pre>
+        <button class="pages">1</button><button class="pages">2</button><button class="pages">3</button><button class="pages">4</button><button class="pages">5</button>
+        <button class="low_pages">6</button>
+      </pre>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+  <script src="./index.js"></script>
+</html>

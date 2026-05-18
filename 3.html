@@ -1,62 +1,49 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en" prefix="og: https://ogp.me/ns#">
-  <head>
-    <meta property="og:title" content="The Tutorial" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yaoleksa.github.io/tutorial" />
-    <meta property="og:image" content="./imgs/tennisbook.png" />
-    <meta property="og:description" content="Short, useful manual describes few situations which I have faced with">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css" />
-    <link rel="shortcut icon" href="./imgs/tennisbook.png">
-    <title>Third page</title>
-  </head>
-  <body>
-    <h3 id="chapter6">The simpliest redirection logic</h3>
-    <p>To implement redirection logic the easiest approach would be set response code to 302 and add response header property <code>Location</code>. Example of successful 
-      implantation you can see on image below</p>
-      <img src="./imgs/redirection.png">
-      <h3 id="chapter7">How to deploy simple API with aws service</h3>
-      <p>Due to AWS being a serverless resource, firstly you need to install the <code>serverless</code> package globally on your PC with <code>npm</code>. For this purpose run the next 
-      command into the terminal <code>sudo npm i serverless -g</code>. After that, you need to configure your credentials with the next command: 
-      <code>serverless config credentials --provider aws --key your_key --secret your_secret</code>. You can read how to get key and secret in this article: 
-      <a href="https://hackernoon.com/deploying-a-simple-serverless-nodejs-application-on-aws-lambda-functions" target="_blank">
-        Deploying a Simple Serverless Node.js Application on AWS Lambda Functions</a>. After this step, you can select the desired language and create a project based on Serverless 
-        templates.
-      A list of all available templates follows by the next link <a href="https://www.serverless.com/framework/docs/providers/aws/cli-reference/create" target="_blank">
-        Available Templates
-      </a></p>
-      <h3 id="chapter8">How to use basic Google Sheet API (how to use it via CURL or some other REST client)</h3>
-      <p>The <a href="https://developers.google.com/sheets/api/guides/concepts" target="_blank">Google documentation for developers</a> provides many examples of interacting 
-        with Google Sheets using different programming languages such as Python, Ruby, Java, etc.
-        But in this tutorial, I want to highlight the basic API, which you can use with CURL CLI, Postman, or any other REST client.<br>
-      <b>!Important notice!</b><br>
-      The Google Sheets API avaliable only for spreadsheets with public read/write permission (everybody who has the link can edit sheet).
-    </p>
-      <h4 id="chapter8_1">Basic GET request</h4>
-      <p>So, let's start with a basic HTTP GET request which returns a simple JSON object with information about the spreadsheet title, ID, time zone, default format, etc.
-         First of all, you need to create a new project on the <a href="https://console.cloud.google.com/" target="_blank">Google Cloud console</a>. For this purpose go to 
-         the <a href="https://console.cloud.google.com/cloud-resource-manager" target="_blank">Manage Resources</a> tab and click the <code>CREATE PROJECT</code> button.<br><br>
-         <img src="./imgs/create-project.png"><br><br>
-         Assign the name to your project, this is only one required parameter for now. 
-         <br><br>
-         <img src="./imgs/name.png">
-         <br><br>
-         After clicking on the three dashes on the left-up corner<br><br>
-         <img src="./imgs/dashes.png">
-         <br><br>
-         and select the APIs & Services button from the drop-down menu and after click on the Library section from the drop-down menu on the left.
-         <br><br>
-         <img src="./imgs/APInServicesLibrary.png">
-         <br><br>
-      </p>
-      <div id="page_container">
-        <pre>
-          <button class="pages">1</button><button class="pages">2</button><button class="pages">3</button><button class="pages">4</button><button class="pages">5</button>
-          <button class="low_pages">6</button>
-        </pre>
-      </div>
-  </body>
-  <script src="./index.js"></script>
+<html prefix="og: https://ogp.me/ns#">
+    <head>
+        <meta property="og:title" content="The Tutorial" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yaoleksa.github.io/tutorial" />
+        <meta property="og:image" content="./imgs/tennisbook.png" />
+        <meta property="og:description" content="Short, useful manual describes few situations which I have faced with">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./index.css" />
+        <link rel="shortcut icon" href="./imgs/tennisbook.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    </head>
+    <body>
+        <h3 id="chapter4">How to use basic Google Sheet API (how to use it via CURL or some other REST client)</h3>
+        <p>The <a href="https://developers.google.com/sheets/api/guides/concepts" target="_blank">Google documentation for developers</a> provides many examples of interacting
+            with Google Sheets using different programming languages such as Python, Ruby, Java, etc.
+            But in this tutorial, I want to highlight the basic API, which you can use with CURL CLI, Postman, or any other REST client.<br>
+        <b>!Important notice!</b><br>
+        The Google Sheets API avaliable only for spreadsheets with public read/write permission (everybody who has the link can edit sheet).
+        </p>
+        <h4 id="chapter4_1">Basic GET request</h4>
+        <p>So, let's start with a basic HTTP GET request which returns a simple JSON object with information about the spreadsheet title, ID, time zone, default format, etc.
+            First of all, you need to create a new project on the <a href="https://console.cloud.google.com/" target="_blank">Google Cloud console</a>. For this purpose go to
+            the <a href="https://console.cloud.google.com/cloud-resource-manager" target="_blank">Manage Resources</a> tab and click the <code>CREATE PROJECT</code> button.<br><br>
+            <img src="./imgs/create-project.png"><br><br>
+            Assign the name to your project, this is only one required parameter for now.
+            <br><br>
+            <img src="./imgs/name.png">
+            <br><br>
+            After clicking on the three dashes on the left-up corner<br><br>
+            <img src="./imgs/dashes.png">
+            <br><br>
+            and select the APIs & Services button from the drop-down menu and after click on the Library section from the drop-down menu on the left.
+            <br><br>
+            <img src="./imgs/APInServicesLibrary.png">
+            <br><br>
+        </p>
+        <div id="page_container">
+            <pre>
+              <button class="pages">1</button><button class="pages">2</button><button class="pages">3</button><button class="pages">4</button><button class="pages">5</button>
+              <button class="low_pages">6</button><button class="pages">7</button>
+            </pre>
+          </div>
+        <script src="./index.js"></script>
+    </body>
 </html>

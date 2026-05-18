@@ -1,56 +1,56 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en" prefix="og: https://ogp.me/ns#">
-  <head>
-    <meta property="og:title" content="The Tutorial" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yaoleksa.github.io/tutorial" />
-    <meta property="og:image" content="./imgs/tennisbook.png" />
-    <meta property="og:description" content="Short, useful manual describes few situations which I have faced with">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css" />
-    <link rel="shortcut icon" href="./imgs/tennisbook.png">
-    <title>Fourth page</title>
-  </head>
-  <body>
-    <p>It's crucial to select the proper project if you have a few</p>
-    <br>
-      <img src="./imgs/selectProj.png">
-    <br>
-    <p>Scroll down and click on Google Sheets API widget.</p>
-    <br>
-      <img src="./imgs/GSapi.png">
-    <br>
-    <p>Enable it.</p>
-    <br>
-      <img src="./imgs/enable.png">
-    <br>
-    <p>The next step is to choose the <a href="https://console.cloud.google.com/apis/credentials" target="_blank">credentials</a> tab on the left the drop-down menu and click the 
-      <code>CREATE CREDENTIALS</code> button on the top bar.</p>
-      <br>
-      <img src="./imgs/credentials.png">
-      <br>
-      <p>Choose API key type.</p>
-      <br>
-      <img src="./imgs/apikey.png">
-      <br>
-      <p>It's all we can make an API call using CURL or any other REST client.</p>
-      <p>The example below illustrates how to make a GET HTTP API call using a CURL CLI. So, open a terminal and paste the next code, click ENTER</p>
-      <pre>
-        curl -X GET https://sheets.googleapis.com/v4/spreadsheets/{SpreadsheetID}?key={API_KEY}
-      </pre>
-      <p>Of course that {API_KEY} and {SpreadsheetID} you replace with the already generated API key on the previous step</p>
-      <p>SpreadsheetID you can find by opening spreadsheet with which you want to work and copy ID from URL bar</p>
-      <br>
-      <img src="./imgs/spreadsheetID.png">
-      <br>
-      <div id="page_container">
+<html prefix="og: https://ogp.me/ns#">
+    <head>
+        <meta property="og:title" content="The Tutorial" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yaoleksa.github.io/tutorial" />
+        <meta property="og:image" content="./imgs/tennisbook.png" />
+        <meta property="og:description" content="Short, useful manual describes few situations which I have faced with">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./index.css" />
+        <link rel="shortcut icon" href="./imgs/tennisbook.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    </head>
+    <body>
+        <p>It's crucial to select the proper project if you have a few</p>
+        <br>
+        <img src="./imgs/selectProj.png">
+        <br>
+        <p>Scroll down and click on Google Sheets API widget.</p>
+        <br>
+        <img src="./imgs/GSapi.png">
+        <br>
+        <p>Enable it.</p>
+        <br>
+        <img src="./imgs/enable.png">
+        <br>
+        <p>The next step is to choose the <a href="https://console.cloud.google.com/apis/credentials" target="_blank">credentials</a> tab on the left the drop-down menu and click the
+        <code>CREATE CREDENTIALS</code> button on the top bar.</p>
+        <br>
+        <img src="./imgs/credentials.png">
+        <br>
+        <p>Choose API key type.</p>
+        <br>
+        <img src="./imgs/apikey.png">
+        <br>
+        <p>It's all we can make an API call using CURL or any other REST client.</p>
+        <p>The example below illustrates how to make a GET HTTP API call using a CURL CLI. So, open a terminal and paste the next code, click ENTER</p>
         <pre>
-          <button class="pages">1</button><button class="pages">2</button><button class="pages">3</button><button class="pages">4</button><button class="pages">5</button>
-          <button class="low_pages">6</button>
+            curl -X GET https://sheets.googleapis.com/v4/spreadsheets/{SpreadsheetID}?key={API_KEY}
         </pre>
-      </div>
-    <script src="./index.js"></script>
-  </body>
-  <script src="./index.js"></script>
+        <p>Of course that {API_KEY} and {SpreadsheetID} you replace with the already generated API key on the previous step</p>
+        <p>SpreadsheetID you can find by opening spreadsheet with which you want to work and copy ID from URL bar</p>
+        <br>
+        <img src="./imgs/spreadsheetID.png">
+        <br>
+        <div id="page_container">
+            <pre>
+              <button class="pages">1</button><button class="pages">2</button><button class="pages">3</button><button class="pages">4</button><button class="pages">5</button>
+              <button class="low_pages">6</button><button class="pages">7</button>
+            </pre>
+          </div>
+        <script src="./index.js"></script>
+    </body>
 </html>

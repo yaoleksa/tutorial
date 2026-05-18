@@ -1,0 +1,3 @@
+2.html - make Node run faster +
+3.html - The simpliest redirection logic; How to deploy simple API with aws service +
+6.html - Refresh the Google Sheets API access token

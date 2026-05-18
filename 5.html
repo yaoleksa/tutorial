@@ -1,57 +1,71 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en" prefix="og: https://ogp.me/ns#">
-  <head>
-    <meta property="og:title" content="The Tutorial" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yaoleksa.github.io/tutorial" />
-    <meta property="og:image" content="./imgs/tennisbook.png" />
-    <meta property="og:description" content="Short, useful manual describes few situations which I have faced with">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css" />
-    <link rel="shortcut icon" href="./imgs/tennisbook.png">
-    <title>Fifth page</title>
-  </head>
-  <body>
-    <p>You should get a response similar to this one</p>
-    <br>
-    <img src="./imgs/responseexample.png">
-    <br>
-    <p>You can fetch some cells' content as well. For this purpose add sheet name and range optional parameters to your request. An example of such a request is seen below
-      <pre>curl -X GET 'https://sheets.googleapis.com/v4/spreadsheets/{SPREADSHEET_ID}/values/{SHEET_NAME}!{RANGE}?key={API_KEY}'</pre>
-      Take attention this time we use a single quote for a URL it's crucial because there is <code>!</code> sign in a range parameter so BASH can't treat the URL correctly in this case, 
-      to make BASH work with such URL we wrap the whole URL into a single quote.<br>
-      Expected that you will receive a response similar to like in the image below.
-    </p>
-    <br>
-    <img src="./imgs/getrange.png">
-    <br>
-    <h4 id="chapter8_2">Write to Google Sheet</h4>
-    <p>You need to add a <code>Bearer</code> access token to your request header to <code>POST</code> some content in a Google spreadsheet. You can get access tokens on 
-      <a href="https://developers.google.com/oauthplayground/" target="_blank">OAuth 2.0 Playground</a>. For this purpose pick Google Sheets API on the left container. 
-      To do this quickly you can use a <code>Ctrl + F</code> keyboard shortcut. Start typing the <code>sheet</code> in the search bar. When you find the Google Sheets API item click on it,
-      select <code>https://www.googleapis.com/auth/spreadsheets</code> scope and click the <code>Authorize APIs</code> button.</p>
-      <br>
-      <img src="./imgs/oauth.png">
-      <br>
-      <p>In this step, you need to login into your Google account and allow OAuth 2.0 platform access to your account. When you've successfuly logged in you click on
-        the <code>Exchange authorization code for tokens</code> button.
-      </p>
-      <br>
-      <img src="./imgs/exchangecode.png">
-      <br>
-    </p>
-    <p>If everything is good you should get access and refresh tokens</p>
-    <br>
-    <img src="./imgs/tokens.png">
-    <br>
-    <div id="page_container">
-      <pre>
-        <button class="pages">1</button><button class="pages">2</button><button class="pages">3</button><button class="pages">4</button><button class="pages">5</button>
-        <button class="low_pages">6</button>
-      </pre>
-    </div>
-    <script src="./index.js"></script>
-  </body>
-  <script src="./index.js"></script>
+<html prefix="og: https://ogp.me/ns#">
+    <head>
+        <meta property="og:title" content="The Tutorial" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yaoleksa.github.io/tutorial" />
+        <meta property="og:image" content="./imgs/tennisbook.png" />
+        <meta property="og:description" content="Short, useful manual describes few situations which I have faced with">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./index.css" />
+        <link rel="shortcut icon" href="./imgs/tennisbook.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script>
+    </head>
+    <body>
+        <p>You should get a response similar to this one</p>
+        <br>
+        <img src="./imgs/responseexample.png">
+        <br>
+        <p>You can fetch some cells' content as well. For this purpose add sheet name and range optional parameters to your request. An example of such a request is seen below
+        <pre>curl -X GET 'https://sheets.googleapis.com/v4/spreadsheets/{SPREADSHEET_ID}/values/{SHEET_NAME}!{RANGE}?key={API_KEY}'</pre>
+        Take attention this time we use a single quote for a URL it's crucial because there is <code>!</code> sign in a range parameter so BASH can't treat the URL correctly in this case,
+        to make BASH work with such URL we wrap the whole URL into a single quote.<br>
+        Expected that you will receive a response similar to like in the image below.
+        </p>
+        <br>
+        <img src="./imgs/getrange.png">
+        <br>
+        <h4 id="chapter4_2">Write to Google Sheet</h4>
+        <p>You need to add a <code>Bearer</code> access token to your request header to <code>POST</code> some content in a Google spreadsheet. You can get access tokens on
+        <a href="https://developers.google.com/oauthplayground/" target="_blank">OAuth 2.0 Playground</a>. For this purpose pick Google Sheets API on the left container.
+        To do this quickly you can use a <code>Ctrl + F</code> keyboard shortcut. Start typing the <code>sheet</code> in the search bar. When you find the Google Sheets API item click on it,
+        select <code>https://www.googleapis.com/auth/spreadsheets</code> scope and click the <code>Authorize APIs</code> button.</p>
+        <br>
+        <img src="./imgs/oauth.png">
+        <br>
+        <p>In this step, you need to login into your Google account and allow OAuth 2.0 platform access to your account. When you've successfuly logged in you click on
+            the <code>Exchange authorization code for tokens</code> button.
+        </p>
+        <br>
+        <img src="./imgs/exchangecode.png">
+        <br>
+        </p>
+        <p>If everything is good you should get access and refresh tokens</p>
+        <br>
+        <img src="./imgs/tokens.png">
+        <br>
+        <h4 id="chapter4_3">Refresh the Google Sheets API access token</h4>
+        <p>In the previous step, you've got a <code>refresh token</code>. So to get new <code>access</code> you need to make a POST API call with that URL:
+            <code>https://developers.google.com/oauthplayground/refreshAccessToken</code>. An example is seen below
+        <pre>
+            curl -X POST \<br>
+    -d '{<br>
+            &nbsp;&nbsp;&nbsp;"token_uri": "https://oauth2.googleapis.com/token",<br>
+            &nbsp;&nbsp;&nbsp;"refresh_token": "{REFRESH_TOKEN}"<br>
+    }' "https://developers.google.com/oauthplayground/refreshAccessToken"<br>
+</pre>Expected that you should get a response similar to this one (and {REFRESH_TOKEN} you should replace with your refresh token received on the previous step):
+        </p>
+        <br>
+        <img src="./imgs/refresh_token.png">
+        <br>
+        <div id="page_container">
+            <pre>
+              <button class="pages">1</button><button class="pages">2</button><button class="pages">3</button><button class="pages">4</button><button class="pages">5</button>
+              <button class="low_pages">6</button><button class="pages">7</button>
+            </pre>
+          </div>
+        <script src="./index.js"></script>
+    </body>
 </html>
