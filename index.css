@@ -33,6 +33,12 @@ iframe{
 .low_pages {
     margin-left: -0.5rem;
 }
+.inline-img {
+    display: flex;
+}
+.carucel {
+    width: 85%;
+}
 #page_container {
     margin-left: 45% !important;
 }

@@ -64,29 +64,47 @@
                 you can see an example of how to implement this
             </p>
             <pre><code class="line-numbers language-html">
-                &lt!doctype html &gt
-                &lthtml dir="ltr" lang="uk" &gt
-                &lthead &gt
-                    &ltmeta charset="utf-8" &gt
-                    &lttitle &gtTic-Tac-Toe &lt/title &gt
-                    &ltstyle &gt &lt/style &gt
-                    &ltscript src="https://unpkg.com/@babel/standalone/babel.min.js" &gt &lt/script &gt
-                    &ltscript src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js" &gt &lt/script &gt
-                    &ltscript type="importmap" &gt
+                &lt!doctype html&gt
+                &lthtml dir="ltr" lang="uk"&gt
+                &lthead&gt
+                    &ltmeta charset="utf-8"&gt
+                    &lttitle&gtTic-Tac-Toe &lt/title&gt
+                    &ltstyle&gt &lt/style&gt
+                    &ltscript src="https://unpkg.com/@babel/standalone/babel.min.js"&gt &lt/script&gt
+                    &ltscript src="https://ga.jspm.io/npm:es-module-shims@1.7.0/dist/es-module-shims.js"&gt &lt/script&gt
+                    &ltscript type="importmap"&gt
                         {
                             "imports": {
                                 "react": "https://esm.sh/react?dev",
                                 "react-dom/client": "https://esm.sh/react-dom/client?dev"
                             }
                         }
-                    &lt/script &gt
-                    &ltscript type="text/babel" data-type="module" src="app.js" &gt &lt/script &gt
-                &lt/head &gt
-                &ltbody &gt
-                    &ltdiv id="root" &gt &lt/div &gt
-                &lt/body &gt
-                &lt/html &gt
+                    &lt/script&gt
+                    &ltscript type="text/babel" data-type="module" src="app.js"&gt &lt/script&gt
+                &lt/head&gt
+                &ltbody&gt
+                    &ltdiv id="root"&gt &lt/div&gt
+                &lt/body&gt
+                &lt/html&gt
             </code></pre>
+            <p>
+                Important notice! This application will be available only via an
+                <code>HTTP server</code>. You can run the server on your own or use
+                the VS Code extension <code>Live Server</code>.
+                To do it with the <code>Live Server</code> extension, just open the folder
+                with your script, click the right mouse button on your script file, and then
+                click <code>Open with Live Server</code>. Extension is running your
+                application on the <code>http://127.0.0.1:5500/</code> address.
+                One more important notice  in terms of the <code>Live Server</code>
+                extension. You have to run your <code>.html</code> file, not
+                <code>.js</code>. If you want to stop the server listening, just click on the
+                <code>Port: 5500</code> text on the bottom right.
+            </p>
+            <span class="inline-img">
+                <button class="back-button">&larr; Back</button>
+                    <img class="carucel" src="./imgs/vsc-file.png"/>
+                <button class="next-button">Next &rarr;</button>
+            </span>
         </div>
         <div>
             <div>

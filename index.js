@@ -61,4 +61,10 @@ function pagination(event) {
   }
 }
 
-console.log(document.getElementsByClassName('row-number'))
+for(const component of document.getElementsByClassName('next-button')) {
+  component.addEventListener('click', showNext(event, ['vsc-file', 'vsc-folder', 'vsc-run-choose', 'vsc-run-folder']));
+}
+
+function showNext(event, sourceSet, index) {
+  document.getElementsByClassName('carucel')[index];
+}
